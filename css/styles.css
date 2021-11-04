@@ -1,0 +1,155 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Calibri, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper, header, footer {
+    width: 100%;
+}
+
+.wrapper > *, header > *, footer > * {
+    position: relative;
+    max-width: 1440px;
+    padding: 10px 20px;
+    margin: 0 auto;
+}
+
+.wrapper > .inner {
+    background: bisque;
+}
+
+.inner {
+    box-sizing: border-box;
+}
+
+/** HEADER **/
+header {
+    background: coral;
+}
+
+header > .inner {
+    height: 220px;
+    background: #e56b3e;
+}
+
+.logo {
+    position: absolute;
+    width: 120px;
+    height: 160px;
+    left: 20px;
+    top: 20px;
+    background: bisque;
+}
+
+.phone {
+    position: absolute;
+    width: 240px;
+    height: 28px;
+    right: 20px;
+    top: 20px;
+    background: bisque;
+}
+
+.telegram {
+    position: absolute;
+    width: 180px;
+    height: 28px;
+    right: 20px;
+    top: 68px;
+    background: bisque;
+}
+
+.nav {
+    position: absolute;
+    top: 74px;
+    left: 50%;
+    width: 740px;
+    transform: translate(-50%, 0);
+}
+
+.nav__list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+.nav__list li {
+    list-style-type: none;
+}
+
+.nav__list a {
+    color: #573327;
+}
+
+/** MAIN **/
+.card-holder {
+    width: 100%;
+    padding: 20px 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: blanchedalmond;
+}
+
+.some-card {
+    display: flex;
+    flex: 0 1 24%;
+    width: 280px;
+    height: 400px;
+    margin: 0 0 40px 0;
+    background: chocolate;
+}
+
+/** FOOTER **/
+footer {
+    background: burlywood;
+    margin-top: auto;
+}
+
+footer > .inner {
+    height: 180px;
+    background: #cba16c;
+}
+
+.footer-menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 740px;
+    margin: 0;
+    padding: 0;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer-menu__link {
+    display: block;
+    height: 22px;
+    list-style-type: none;
+    flex-shrink: 0;
+    background: #b1926a;
+}
+
+.copyright {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    width: 220px;
+    height: 18px;
+    transform: translate(-50%, 0);
+    background: #b1926a;
+}
+
