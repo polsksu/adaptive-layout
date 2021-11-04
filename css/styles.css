@@ -66,6 +66,10 @@ header > .inner {
     background: bisque;
 }
 
+#hamburger { display: none; }
+
+.overlay-to-close { display: none; }
+
 .nav {
     position: absolute;
     top: 74px;
@@ -151,5 +155,126 @@ footer > .inner {
     height: 18px;
     transform: translate(-50%, 0);
     background: #b1926a;
+}
+
+@media (max-width: 1440px) {
+    .wrapper > *,
+    header > *,
+    footer > * {
+        max-width: 1020px;
+    }
+
+    header > .inner {
+        overflow-x: hidden;
+        overflow-y: visible;
+    }
+
+    #hamburger ~ .nav {
+        z-index: 2;
+        right: -376px;
+        top: 0;
+        left: auto;
+        transition: right .3s;
+    }
+
+    #hamburger:checked ~ .nav {
+        display: block;
+        right: 0;
+    }
+
+    #hamburger:checked ~ .overlay-to-close {
+        z-index: 1;
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .hamburger-button {
+        position: absolute;
+        display: block;
+        width: 28px;
+        height: 28px;
+        border: solid 3px white;
+        top: 20px;
+        right: 20px;
+    }
+
+    .hamburger__dash {
+        display: block;
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        background: #fff;
+    }
+
+    .hamburger__dash_line-1 {
+        top: 8px;
+        left: 4px;
+    }
+
+    .hamburger__dash_line-2 {
+        top: 12px;
+        left: 4px;
+    }
+
+    .hamburger__dash_line-3 {
+        top: 16px;
+        left: 4px;
+    }
+
+    .nav {
+        width: 300px;
+        background: #c9643e;
+        border: 2px solid #fff;
+        transform: none;
+    }
+
+    .nav__list {
+        flex-direction: column;
+    }
+
+    .nav__list li {
+        display: block;
+        float: none;
+        height: 28px;
+        line-height: 24px;
+        padding: 2px;
+        border-bottom: 2px solid #fff;
+        text-align: left;
+    }
+
+    .phone,
+    .telegram {
+        right: auto;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    .some-card {
+        flex: 0 1 32%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .wrapper > *,
+    header > *,
+    footer > * {
+        max-width: 760px;
+    }
+
+    .some-card {
+        flex: 0 1 49%;
+    }
+
+    .footer-menu {
+        box-sizing: border-box;
+        width: calc(100% - 40px);
+        left: 20px;
+        right: 20px;
+        transform: none;
+    }
 }
 
