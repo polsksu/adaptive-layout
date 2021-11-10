@@ -71,7 +71,7 @@ header > .inner {
 .overlay-to-close { display: none; }
 
 .nav {
-    position: fixed;
+    position: absolute;
     top: 74px;
     left: 50%;
     width: 740px;
@@ -167,6 +167,10 @@ footer > .inner {
     header > .inner {
         overflow-x: hidden;
         overflow-y: visible;
+    }
+
+    .nav {
+        position: fixed;
     }
 
     #hamburger ~ .nav {
