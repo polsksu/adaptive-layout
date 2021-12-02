@@ -335,6 +335,7 @@ footer > .inner {
     .phone {
         width: 200px;
     }
+
     .telegram {
         width: 160px;
     }
@@ -370,10 +371,13 @@ footer > .inner {
         left: auto;
         right: 20px;
     }
-
 }
 
 @media (max-width: 320px) {
+    body {
+        min-width: 320px;
+    }
+
     header > .inner {
         height: 150px;
     }
